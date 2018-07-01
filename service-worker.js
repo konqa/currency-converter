@@ -1,5 +1,5 @@
 // Cache version
-const cacheName = 'v7.1.1';
+const cacheName = 'v11.1.1';
 
 const cachedFiles = [
 	'./',
@@ -7,9 +7,8 @@ const cachedFiles = [
 	'./js/app.js',
 	'./css/reset.css',
 	'./css/style.css',
-	// 'https://fonts.googleapis.com/css?family=family=Montserrat'
+	'./assets/caret.png',
 ]
-
 
 
 self.addEventListener('install', function (e) {
@@ -88,4 +87,28 @@ self.addEventListener('fetch', function (e) {
 		})
 
 	)
-})
+});
+
+self.addEventListener('fetch', function (e) {
+  const database_url = 'https://free.currencyconverterapi.com/api/v5/currencies';
+
+  if (e.request.url.indexOf(database_url) === 0) {
+    e.respondWith(
+
+      fetch(e.request).then(response =>
+        caches.open(dataCacheName).then(cache => {
+
+          cache.put(e.request.url, response.clone());
+          return response;
+        }),
+      ),
+    );
+  } else {
+    e.respondWith(
+      caches
+        .match(e.request)
+
+        .then(response => response || fetch(e.request)),
+    );
+  }
+});

@@ -119,8 +119,8 @@ get('https://free.currencyconverterapi.com/api/v5/countries')
   
 
 
-  let converted_value = document.querySelector(
-    'input#rateCurrency2Amount_',
-  );
+  let converted_value = document.querySelector('input#rateCurrency2Amount_');
+  rateCurrency1ID = document.querySelector('.rateCurrency1ID');
   
-  converted_value.value = 'ichi';
+  rateCurrency1ID.value = 'RED000';
+  converted_value.value = 5000;
