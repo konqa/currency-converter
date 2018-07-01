@@ -5,8 +5,6 @@
   "main": "gulpfile.js",
   "devDependencies": {
     "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.13.0",
     "gulp": "^3.9.1",
     "gulp-connect": "^2.3.1",
     "gulp-util": "^3.0.8"
