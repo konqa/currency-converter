@@ -11,7 +11,7 @@ const dbPromise = db.open('currencies', 1, upgradeDb => {
   }
 });
 
-export default class database {
+export default class odatabase {
   static getCurrencies(key) {
     return dbPromise.then(db => {
         if (!db) return;

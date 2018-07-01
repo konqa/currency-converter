@@ -93,9 +93,9 @@ get('https://free.currencyconverterapi.com/api/v5/convert?q=' + currencyPair)
   
 get('https://free.currencyconverterapi.com/api/v5/countries')
   .then(function (response) {
-    // console.log('Countries response', response.results);
-    console.log('Countries response', response.results.AE.currencyId);
-    console.log('Countries response', response.results.AE.currencyName);
+    // // console.log('Countries response', response.results);
+    // console.log('Countries response', response.results.AE.currencyId);
+    // console.log('Countries response', response.results.AE.currencyName);
 
     // console.log('ID test', document.querySelectorAll('*[id]'));
 
@@ -117,10 +117,22 @@ get('https://free.currencyconverterapi.com/api/v5/countries')
   })
 
   
-
+let footer = `<div class="rate">1
+<span class="rateCurrency2ID">${rateCurrency1ID}</span> =
+<span class="rateCurrency2Rate">0.00</span>
+<span class="rateCurrency1ID">${rateCurrency2ID}</span>
+</div>
+<div class="rate">1
+<span class="rateCurrency2ID">${rateCurrency2ID}</span> =
+<span class="rateCurrency2Rate">0.00</span>
+<span class="rateCurrency1ID">${rateCurrency1ID}</span>
+</div>`;
 
   let converted_value = document.querySelector('input#rateCurrency2Amount_');
   rateCurrency1ID = document.querySelector('.rateCurrency1ID');
+  let footer_content = document.querySelector('#footer');
   
-  rateCurrency1ID.value = 'RED000';
-  converted_value.value = 5000;
+  // rateCurrency1ID.value = 'RED000';
+  // converted_value.value = 5000;
+
+  footer_content.innerHTML = footer;
