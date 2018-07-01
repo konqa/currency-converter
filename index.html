@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Currency Converter</title>
+	
+</head>
+<body>
+	<div class="container">
+
+		<h1>Currency Converter</h1>
+
+		<form class="currencyForm clearfix">
+
+			<!-- <span class="uccInputWrapper inputWrap">
+				<label for="amount" class="screenReader-only">Amount</label>
+				<input type="text" name="Amount" id="amount" class="uccInput uccAmount" onfocus="if(this.value == '1') this.value='';" onblur="if(this.value == '') this.value='1' ;"
+				 value="80" maxlength="50" tabindex="1">
+			</span>
+
+			<span id="fromInput" class="autocomplete  withFlag">
+				<input type="text" id="from" tabindex="3" value="" autocomplete="off" selectvalue="USD - US Dollar" class="ac_flag_input">
+				<input type="hidden" name="From" id="from_var" value="USD">
+				<a href="#" id="from_sc" class="dropdownArrow ">▼</a>
+			</span>
+
+			<span id="toInput" class="autocomplete  withFlag">
+				<input type="text" id="to" tabindex="4" value="" autocomplete="off" selectvalue="EUR - Euro" class="ac_flag_input">
+				<input type="hidden" name="To" id="to_var" value="EUR">
+				<a href="#" id="to_sc" class="dropdownArrow ">▼</a>
+			</span> -->
+
+
+			<div class="form-group form-group-lg">
+			
+				<label class="control-label">
+					<span class="secondary_l">You send</span>
+				</label>
+			
+				<div class="input-group input-group-lg">
+			
+					<input id="rateCurrency1Amount_" type="number" autocomplete="off" name="amount" step="any" class="form-control" placeholder="" onfocus="if(this.value == '1') this.value='';" onblur="if(this.value == '') this.value='1' ;" value="100" maxlength="50">
+			
+					<span class="input-group-btn amount-currency-select-btn">
+			
+						<div class="btn-group btn-block dropdown" aria-hidden="false">
+			
+							<button type="button" class="btn btn-input dropdown-toggle btn-input-inverse btn-addon btn-lg" data-toggle="dropdown" aria-expanded="false">
+								<span>
+									<span class="text-ellipsis">
+										<span class="" id="rateCurrency1ID_">
+											GBP
+										</span>
+									</span>
+								</span>
+								<span class="caret">
+									<img src="assets/caret.png">
+								</span>
+							</button>
+			
+							<ul class="dropdown-menu dropdown-menu-xs-right dropdown-menu-lg">
+								<li class="">
+									<a href="" class="">
+										EUR
+										<span class="small m-l-1 ">
+											West African CFA franc
+										</span>
+									</a>
+								</li>
+			
+								<li class="">
+									<a href="">
+										EUR
+										<span class="small m-l-1">
+											Euro
+										</span>
+									</a>
+								</li>
+			
+							</ul>
+			
+						</div>
+					</span>
+				</div>
+			</div>
+
+
+			
+
+
+			<div class="form-group form-group-lg">
+			
+					<label class="control-label">
+						<span class="secondary_l">Recipient gets</span>
+					</label>
+				
+					<div class="input-group input-group-lg">
+				
+						<input id="rateCurrency2Amount_" type="number" autocomplete="off" name="amount" step="any" class="form-control" placeholder="" onfocus="if(this.value == '1') this.value='';" onblur="if(this.value == '') this.value='1' ;" maxlength="50" value="" readonly>
+				
+						<span class="input-group-btn amount-currency-select-btn">
+				
+							<div class="btn-group btn-block dropdown" aria-hidden="false">
+				
+								<button type="button" class="btn btn-input dropdown-toggle btn-input-inverse btn-addon btn-lg" data-toggle="dropdown" aria-expanded="false">
+									<span>
+										<span class="text-ellipsis">
+											<span class="" id="rateCurrency2ID_">
+												BWP
+											</span>
+										</span>
+									</span>
+									<span class="caret">
+										<img src="assets/caret.png">
+									</span>
+								</button>
+				
+								<ul class="dropdown-menu dropdown-menu-xs-right dropdown-menu-lg">
+									<li class="">
+										<a href="" class="">
+											EUR
+											<span class="small m-l-1 ">
+												West African CFA franc
+											</span>
+										</a>
+									</li>
+				
+									<li class="">
+										<a href="">
+											EUR
+											<span class="small m-l-1">
+												Euro
+											</span>
+										</a>
+									</li>
+				
+								</ul>
+				
+							</div>
+						</span>
+					</div>
+				</div>
+	
+	
+			
+			
+			
+			
+			</form>
+
+			<div class="rate rateMargin">1
+				<span id="rateCurrency1Name">USD</span> =
+				<span id="rateCurrency1Rate">0.00</span>
+				<span id="Currency2Name">USD</span>
+			</div>
+			<div class="rate">1
+				<span id="Currency2Name">USD</span> =
+				<span id="rateCurrency2Rate">0.00</span>
+				<span id="rateCurrency1Name">USD</span>
+			</div>
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="js/process.js"></script>
+</body>
+
+</html>
