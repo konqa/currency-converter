@@ -268,6 +268,12 @@ a, .anchor {
   color: #5d7079;
   line-height: 23px;
 }
+
+#convert-button {
+  width: 70%;
+}
+
+
 .m-l-1 {
   margin-left: 8px !important;
 }
