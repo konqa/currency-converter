@@ -116,7 +116,7 @@ get('https://free.currencyconverterapi.com/api/v5/countries')
     console.log("Error", err);
   })
 
-  
+
 let footer = `<div class="rate">1
 <span class="rateCurrency2ID">${rateCurrency1ID}</span> =
 <span class="rateCurrency2Rate">0.00</span>
